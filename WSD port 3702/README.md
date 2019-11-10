@@ -6,7 +6,7 @@
 
 ## Amplification factor: 30-150x (vague depending on SOAP WSDL in use)
 
-## Current responding devices: ~480,000
+## Reflector count: ~480,000
 
 ---
 

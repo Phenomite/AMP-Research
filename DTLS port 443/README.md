@@ -6,7 +6,7 @@
 
 ## Amplification factor: 2-3x
 
-## Current responding devices: 1,002,850
+## Reflector count: 1,002,850
 
 ---
 

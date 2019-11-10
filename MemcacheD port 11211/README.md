@@ -6,7 +6,7 @@
 
 ## Amplification factor: 1,000 - 50,000x
 
-## Current responding devices: 1,300
+## Reflector count: 1,300
 
 ---
 

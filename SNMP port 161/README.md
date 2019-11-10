@@ -6,7 +6,7 @@
 
 ## Amplification factor: 40x
 
-## Current responding devices: ~295,000 with over 2,000 bytes.
+## Reflector count: ~295,000 with over 2,000 bytes.
 
 ---
 
