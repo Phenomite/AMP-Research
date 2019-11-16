@@ -26,6 +26,7 @@ Multiple DVR/XVR/NVR products implement multiple UDP ports for different SNMP-li
 
 ### Documentation
 
+- <https://ipvm.com/reports/dahua-oem> (OEM Listing and article about US bans)
 - <https://community.boschsecurity.com/t5/Security-Video/What-Ports-need-to-be-open-for-LAN-and-WAN-Access-for-Divar-AN/ta-p/536> (Ports)
 - <https://www.dahuasecurity.com/?us> (A large number of responders are this manufacturer)
 - <https://www.hybrid-analysis.com/sample/0a6d12fc58871c387c2e322b099a545b981a91f6719c5251adf6a79c4bd851b7?environmentId=120> (Potential Dahua windows client analysis)

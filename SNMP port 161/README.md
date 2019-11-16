@@ -13,11 +13,15 @@
 ### Refined "public" getbulk query
 
 - **34 byte request responding with an average of 2300 bytes**, leading to an amplification factor of ~40x.
+- Example minimalist probes:
+  - 302402010104067075626c6963a517020465c941f002010002010a3009300706032b06010500
+  - 302402010104067075626c6963a517020474cb377402010002010a3009300706032b06010500
+  - 302402010104067075626c6963a51702047b73cc130201000201643009300706032b06010500
 
 ### Example request/response
 
 - > ~# echo -ne '\x30\x24\x02\x01\x01\x04\x06\x70\x75\x62\x6c\x69\x63\xa5\x17\x02\x04\x7b\x73\xcc\x13\x02\x01\x00\x02\x01\x64\x30\x09\x30\x07\x06\x03\x2b\x06\x01\x05\x00' |nc -u 31.133.49.250 161
-      	<pre>2561 bytes</pre>
+      <pre>2561 bytes</pre>
 
 ### Documentation
 
