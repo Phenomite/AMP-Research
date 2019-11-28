@@ -4,9 +4,9 @@
 
 ## Proto: UDP (and SSL UDP)
 
-## Amplification factor: 15x
+## Amplification factor: ~15x
 
-## Reflector count: Coming soon...
+## Reflector count: ~16,000
 
 ---
 
