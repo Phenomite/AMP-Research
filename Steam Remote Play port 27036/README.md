@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~17x
 
-## Reflector count: Coming...
+## Reflector count: ~275,500 (Home addresses mostly, high flux)
 
 ---
 
