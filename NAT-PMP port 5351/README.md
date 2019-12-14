@@ -4,6 +4,6 @@
 
 ## Proto: UDP
 
-## Amplification factor: 5-15x
+## Amplification factor: 2-5x
 
 ---

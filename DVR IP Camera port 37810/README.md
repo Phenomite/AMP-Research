@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~9x
 
-## Reflector count: 297,056
+## Reflector count: ~315,000 (Dec 2019 - Going up since last scan)
 
 ---
 
