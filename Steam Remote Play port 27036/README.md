@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~17x
 
-## Reflector count: ~275,500 (Home addresses mostly, high flux)
+## Reflector count: ~347,000 (Home addresses mostly, high flux, depends on time of day)
 
 ---
 
