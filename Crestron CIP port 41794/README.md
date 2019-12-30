@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~15x
 
-## Reflector count: ~16,000
+## Reflector count: ~5,500 (60% reduction in 3 months, well done)
 
 ---
 
