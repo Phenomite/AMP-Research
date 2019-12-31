@@ -6,6 +6,8 @@
 
 ## Amplification factor: 5x
 
+## Reflector count: ~9,000 (1/1/2020)
+
 ---
 
 ### Example request/response
