@@ -4,6 +4,8 @@
 
 ## Proto: UDP
 
-## Amplification factor: 15x
+## Amplification factor: ~7x
+
+## Reflector count: ~127,000 (1/1/2020)
 
 ---
