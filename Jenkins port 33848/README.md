@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~5-8x
 
-## Reflector count: Coming soon...
+## Reflector count: ~16,900
 
 ---
 
@@ -36,5 +36,6 @@
 ### Mitigations
 
 - Update your Jenkins master and agents to version 2.219 (LTS 2.204.2) or higher.
-  - OR Set system variable (Manage Jenkins > Configure System) `hudson.udp` to blank. As well as `hudson.DNSMultiCast.disabled` to true.
+  - OR Set system variable (Jenkins start-up command line `java -D*option_here* -jar jenkins.war`) `hudson.udp` to equal `-1`. As well as `hudson.DNSMultiCast.disabled` to true.
+  - E.g. `java -Dhudson.udp=-1 -jar jenkins.war`.
 - Blatantly ACL block `<hudson>.*</hudson>` ASCII string or `sport 33848` (since their fix is to disable it by default anyway).
