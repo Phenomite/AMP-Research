@@ -6,7 +6,9 @@
 
 ## Amplification factor: ~17x
 
-## Reflector count: ~347,000 (Home addresses mostly, high flux, depends on time of day)
+## Reflector count: ~347,000
+
+### Update 20/02 - Patched from hackerone report, reflectors now at 16,000 !
 
 ---
 
