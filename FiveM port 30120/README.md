@@ -18,7 +18,7 @@
 
 - Request: 16 bytes
 
-  - `> ~# echo -ne '\xff\xff\xff\xff\x67\x65\x74\x69\x6e\x66\x6f\x20\x78\x78\x78\x00'|nc -u 85.214.104.48 33848 -w1`
+  - `> ~# echo -ne '\xff\xff\xff\xff\x67\x65\x74\x69\x6e\x66\x6f\x20\x78\x78\x78\x00'|nc -u 94.23.28.219 30120 -w2`
 
 - Response: Avg 250 bytes (differs greatly on custom server name)
 
