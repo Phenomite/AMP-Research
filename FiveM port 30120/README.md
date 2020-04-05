@@ -10,6 +10,7 @@
 
 ---
 
+- *cough is it just me or has quake3 netcode been rebooted*
 - A flavour of GTAV (also Max Payne and some potential others) with "modifications" and multiplayer based on CitizenFX server Source Engine edit, allowing the use of dedicated servers to host your own GTAV experience.
 - They claim it supports LUA and Node on both server and client (erg).
 - Vulnerable to CWE-406 as per usual with Source Engine servers.
@@ -59,3 +60,4 @@
 ### Mitigations
 
 - Vendor issue, CitizenFX will need to address it otherwise will just be left exposed and free to use as an amplification source.
+- Very similar to the still-existing Quake3 netcode problem and same amplification rates.
