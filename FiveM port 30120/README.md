@@ -20,7 +20,7 @@
 
   - ASCII: `getinfo`
 
-  - `> ~# echo -ne '\xff\xff\xff\xff\x 67\x65\x74\x69\x6e\x66\x6f'|nc -u 94.23.28.219 30120 -w2`
+  - `> ~# echo -ne '\xff\xff\xff\xff\x67\x65\x74\x69\x6e\x66\x6f'|nc -u 94.23.28.219 30120 -w2`
 
 - Response: Avg 250 bytes (differs greatly on custom server name)
 
