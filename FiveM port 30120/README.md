@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~7-10x
 
-## Reflector count: Coming soon...
+## Reflector count: ~5,000
 
 ---
 
