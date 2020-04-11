@@ -1,6 +1,6 @@
 # STUN/TURN Open Source Implementations
 
-## Port: 3478
+## Port: 3478, also 8088 (Litespeed - *thanks Sylvia*)
 
 ## Proto: UDP
 
