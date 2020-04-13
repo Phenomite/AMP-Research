@@ -4,13 +4,17 @@
 
 ## Proto: UDP
 
-## Amplification factor: 5x
+## Amplification factor: ~5x
+
+## Reflector count: ~15,000
 
 ---
 
 Amplification factor varies depending on player stats, server slot fullness and player names (random data).
 
 The TSource Engine query (A2S_INFO) has trivially been used as a direct UDP attack against game servers for many years, however by using it to reflect off other game servers, the data returned can typically be an amplification itself.
+
+- `ffffffff54536f7572636520456e67696e6520517565727900`
 
 ### Documentation
 
