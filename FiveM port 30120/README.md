@@ -10,6 +10,10 @@
 
 ---
 
+## Edit: This weakness has been patched via a rate limiter: https://github.com/citizenfx/fivem-docs/issues/99
+
+---
+
 - *cough is it just me or has quake3 netcode been rebooted*
 - A flavour of GTAV (also Max Payne and some potential others) with "modifications" and multiplayer based on CitizenFX server quake server (?) edit, allowing the use of dedicated servers to host your own GTAV experience.
 - It supports LUA and Node on both server and client.

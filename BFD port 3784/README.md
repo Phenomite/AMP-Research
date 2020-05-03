@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~5x
 
-## Reflector count: Coming soon...
+## Reflector count: ~700
 
 ---
 
@@ -25,7 +25,7 @@
 
   - `> ~# echo -ne '\x56\xc8\xf4\xf9\x60\xa2\x1e\xa5\x4d\xfb\x03\xcc\x51\x4e\xa1\x10\x95\xaf\xb2\x67\x17\x67\x81\x32\xfb\x57\xfd\x8e\xd2\x22\x72\x03\x34\x7a\xbb\x98'|nc -u 70.51.197.238 3784 -w2`
 
-- Response: **262 data bytes**
+- Response: **262 bytes**, **340 bytes average**
 
   - ASCII character space: `nothing human readable and it's random on every request`
 
