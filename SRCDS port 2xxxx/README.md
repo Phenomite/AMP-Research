@@ -1,12 +1,12 @@
 # SRCDS (Source game Dedicated Server)
 
-## Common Ports: 27015-27020 (HL2, Gmod, TF2, ARK: Survival Evolved), 28015, 21025 (Starbound)
+## Common Ports: 2302 (Arma3), 27015-27020 (HL2, Gmod, TF2, ARK: Survival Evolved), 28015, 21025 (Starbound)
 
 ## Proto: UDP
 
 ## Amplification factor: ~5x
 
-## Reflector count: ~15,000
+## Reflector count: ~25,000
 
 ---
 
