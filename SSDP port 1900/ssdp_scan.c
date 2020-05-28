@@ -28,6 +28,7 @@ volatile int sleep_between = 0;
 volatile int bytes_sent = 0;
 volatile unsigned long hosts_done = 0;
 FILE *fd;
+
 char payload[] = "M-SEARCH\r\nST:ssdp:all\r\nMAN:\"ssdp:discover\"\r\n";
 int payload_size = sizeof(payload);
 
@@ -41,10 +42,12 @@ void *flood(void *par1) {
   unsigned char buf[65536];
   memset(buf, 0x01, 84);
   int sock;
+
   if ((sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
     perror("ssdp scan - phenomite :: cant open socket!");
     exit(-1);
   }
+
   for (w = ntohl(start_ip); w < htonl(end); w++) {
     struct sockaddr_in servaddr;
     bzero(&servaddr, sizeof(servaddr));
@@ -73,13 +76,14 @@ void *recievethread() {
   int saddr_size, data_size, sock_raw;
   struct sockaddr_in saddr;
   struct in_addr in;
-
   unsigned char *buffer = (unsigned char *)malloc(65536);
   sock_raw = socket(AF_INET, SOCK_RAW, IPPROTO_UDP);
+
   if (sock_raw < 0) {
-    printf("Socket Error\n");
-    exit(1);
+    perror("ssdp scan - phenomite :: Socket error!");
+    exit(-1);
   }
+
   while (1) {
     saddr_size = sizeof saddr;
     data_size = recvfrom(sock_raw, buffer, 65536, 0, (struct sockaddr *)&saddr,
@@ -100,18 +104,17 @@ void *recievethread() {
         // Refuse to list it
         {
           found_srvs++;
-
           fprintf(fd, "%s %d\n", inet_ntoa(saddr.sin_addr), body_length);
           fflush(fd);
         }
       }
     }
   }
+
   close(sock_raw);
 }
 
 int main(int argc, char *argv[]) {
-
   if (argc < 6) {
     fprintf(stderr, "SSDP Scan - Phenomite :: Improved 47 byte payload\r\n");
     fprintf(stdout, "%s 1.0.0.0 255.255.255.255 ssdp.txt 2 1ms\n",
@@ -120,15 +123,11 @@ int main(int argc, char *argv[]) {
   }
   fd = fopen(argv[3], "a");
   sleep_between = atoi(argv[5]);
-
   signal(SIGINT, &sighandler);
-
   int threads = atoi(argv[4]);
   pthread_t thread;
-
   pthread_t listenthread;
   pthread_create(&listenthread, NULL, &recievethread, NULL);
-
   char *str_start = malloc(18);
   memset(str_start, 0, 18);
   str_start = argv[1];
@@ -162,7 +161,6 @@ int main(int argc, char *argv[]) {
   memset(temp, 0, 17);
   sprintf(temp, "\x1b[0;36mPercent Done\x1b[1;37m");
   printf("%s\r\n", temp);
-
   char *new;
   new = (char *)malloc(16 * 6);
   while (running_threads > 0) {
