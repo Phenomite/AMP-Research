@@ -4,9 +4,9 @@
 
 ## Proto: UDP
 
-## Amplification factor: ~9x
+## Amplification factor: ~20x
 
-## Reflector count: ~315,000 (Dec 2019 - Going up since last scan)
+## Reflector count: ~340,000 (Q2 2020)
 
 ---
 
@@ -16,13 +16,13 @@ Multiple DVR/XVR/NVR products implement multiple UDP ports for different SNMP-li
 
 ### Example Request / Response
 
-- Request: 62 bytes
+- Request Size: 4 bytes
 
-  - > ~# echo -ne '\x20\x00\x00\x00\x44\x48\x49\x50\x00\x00\x00\x00\x00\x00\x00\x00\x3e\x00\x00\x00\x00\x00\x00\x00\x3e\x00\x00\x00\x00\x00\x00\x00\x7b\x22\x6d\x65\x74\x68\x6f\x64\x22\x3a\x22\x44\x48\x44\x69\x73\x63\x6f\x76\x65\x72\x2e\x73\x65\x61\x72\x63\x68\x22\x7d'|nc -u 191.251.40.102 37810
+  - > ~# echo -ne '\x44\x48\x49\x50'|nc -u 218.5.136.140 37810
 
-- Response: 759 bytes
+- Avg Response Size: 760 bytes
 
-  - `DHIP▒▒{"mac":"58:10:8c:4d:3b:fa","method":"client.notifyDevInfo","params":{"deviceInfo":{"AlarmInputChannels":0,"AlarmOutputChannels":0,"DeviceClass":"MHDX","DeviceType":"MHDX 1016","HttpPort":1101,"IPv4Address":{"DefaultGateway":"192.168.15.1","DhcpEnable":false,"IPAddress":"192.168.15.110","SubnetMask":"255.255.255.0"},"IPv6Address":{"DefaultGateway":"fe80::1272:23ff:fe4c:1d5a","DhcpEnable":true,"IPAddress":"2804:7f4:5380:8bc5:5810:8cff:fe4d:3bfa\/64","LinkLocalAddress":"fe80::5a10:8cff:fe4d:3bfa\/64"},"MachineName":"KELVIN","Manufacturer":"Intelbras","Port":1102,"RemoteVideoInputChannels":2,"SerialNo":"O9RF220012635","Vendor":"Intelbras","Version":"3.210.IB01.3","VideoInputChannels":16,"VideoOutputChannels":0}}}`
+  - `DHIP{ "mac" : "4c:11:bf:c2:0b:9d", "method" : "client.notifyDevInfo", "params" : { "deviceInfo" : { "AlarmInputChannels" : 0, "AlarmOutputChannels" : 0, "DeviceClass" : "IPC", "DeviceType" : "IPC-HDW5421S", "HttpPort" : 80, "IPv4Address" : { "DefaultGateway" : "218.5.136.1", "DhcpEnable" : false, "IPAddress" : "218.5.136.140", "SubnetMask" : "255.255.255.0" }, "IPv6Address" : { "DefaultGateway" : "2001:250:3000:1::1:1", "DhcpEnable" : false, "IPAddress" : "2001:250:3000:1::1:2\/112", "LinkLocalAddress" : "fe80::4e11:bfff:fec2:0b9d\/64" }, "MachineName" : "1F006E4PAX00075", "Manufacturer" : "Private", "Port" : 37777, "RemoteVideoInputChannels" : 0, "SerialNo" : "1F006E4PAX00075", "Vendor" : "Dahua", "Version" : "2.400.0.8", "VideoInputChannels" : 1, "VideoOutputChannels" : 16 } } }`
 
 ### Documentation
 
