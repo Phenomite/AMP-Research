@@ -1,6 +1,14 @@
 # SRCDS (Source game Dedicated Server)
 
-## Common Ports: 2302-2303, 2602 (Arma3), 27015-27020 (HL2, Gmod, TF2, ARK: Survival Evolved), 28015, 21025 (Starbound)
+## Observed Games and Ports: 
+
+* Arma3 - **2302-2303, 2602**
+* HL2, Gmod, TF2, ARK: Survival Evolved,  - **27015-27021**
+  * Counter-strike 1.6 (Classic) - **27302, 45983**
+  * Counter-strike: Source - **29392**
+  * Counter-strike:Global Offensive - **26742, 52084**
+* Starbound - **28015, 21025**
+* Rustafied (Rust) - **25244**
 
 ## Proto: UDP
 
