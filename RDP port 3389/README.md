@@ -44,7 +44,6 @@
   - Protocol and modes <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpeudp/aea14a52-baa1-4486-bcd8-f30505ec707d>
   - 1.3.2.1 Initialization of UDP session <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpeudp/8275cf8a-6b98-497f-b8b7-a8d015888b89>
   - SYN/ACK Datagram model for use in RDPEUDP <https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpeudp/96eaa81a-ff42-40a2-884c-96b3834db6c8>
-- s
 
 ### Mitigations
 
