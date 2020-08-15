@@ -8,13 +8,15 @@
 
 ---
 
-Other ".well-known/core" resource retrieval request constructions (Hex):
+Other ".well-known/core" resource retrieval request constructions (UID bit changes):
 
 - `40017d70bb2e77656c6c2d6b6e6f776e04636f7265`
 - `400101cebb2e77656c6c2d6b6e6f776e04636f7265`
 - `40017257bb2e77656c6c2d6b6e6f776e04636f7265`
 - `40014b70bb2e77656c6c2d6b6e6f776e04636f7265`
 - `40016570bb2e77656c6c2d6b6e6f776e04636f7265`
+- `40010101bb2e77656c6c2d6b6e6f776e04636f7265`
+- `40015477bb2e77656c6c2d6b6e6f776e04636f7265`
 
 All ".well-known/core" query responses are the same and will be 989 or 991 bytes.
 

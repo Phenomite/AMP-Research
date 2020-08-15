@@ -19,6 +19,7 @@ static unsigned int DPORT = 3702;
 static const char PAYLOAD[] =
     "<:>"; // Well formed:
            // <Envelope><Header><:>a</:></Header><Body><:/></Body></Envelope>
+           // Minified well-formed: <Envelope><Body><Probe></Probe></Body></Envelope>
 
 // Phenomite template begin
 #define MAX_PACKET_SIZE 4096
