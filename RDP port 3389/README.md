@@ -20,7 +20,7 @@
 
 - The response *session id* or initialization connection unique identifier was found to be present on the `4 bytes` located at index `8:11`.
 
-- The contant amplification factor of the initial packet is 28.6x. Due to retransmission, with a single request packet, the total **data amplification is 84x** with a **packet amplification of 3x**. The request packet was discovered via fuzzing against a Windows Server lab target.
+- The constant amplification factor of the initial packet is 28.6x. Due to retransmission, with a single request packet, the total **data amplification is 84x** with a **packet amplification of 3x**. The request packet was discovered and simplified to nullbytes via fuzzing against a Windows Server lab target.
 
 - Keep in mind that the RDP service will retransmit on a 3000 ms timer after the first request and will not *flood* the target regardless of further incoming request packets until all re-transmissions are complete. This lessens the threat of this service in use as a DrDoS source however in significant reflector numbers it can still cause problems.
 
