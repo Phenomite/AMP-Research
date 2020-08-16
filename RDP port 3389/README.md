@@ -8,7 +8,7 @@
 
 ## Packet Amplification factor: **3x***
 
-## Reflector count: **Coming soon...**
+## Reflector count: **13,700 (Aug 2020)**
 
 ---
 
