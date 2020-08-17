@@ -8,7 +8,7 @@
 
 ## Reflector count: ~347,000
 
-### Update 20/02 - Patched from hackerone report, reflectors now at 16,000 !
+### Update 20/02 - Patched from hackerone report, reflectors now at **790** ! (Scan from Aug 2020)
 
 ---
 
