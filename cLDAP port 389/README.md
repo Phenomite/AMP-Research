@@ -6,7 +6,13 @@
 
 ## Amplification factor: 50-70x
 
+## Reflector count: ~6,100 (Sep 2020)
+
 ---
+
+Involved in the 2.3Tbps attack on AWS infrastructure in February 2020. <https://aws-shield-tlr.s3.amazonaws.com/2020-Q1_AWS_Shield_TLR.pdf>.
+
+This 3 day attack contributed to the loss of 3,000 reflectors down to the current ~6,100.
 
 ### Refined payload
 
