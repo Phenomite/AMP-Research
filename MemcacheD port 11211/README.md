@@ -1,4 +1,4 @@
-# MemcacheD (Active Q2 2020)
+# MemcacheD (Active Q3 2020)
 
 ## Port: 11211
 
@@ -6,7 +6,9 @@
 
 ## Amplification factor: 200x (Q2 2020 - using `memcached-static.c` script)
 
-## Reflector count: 1,900 (Q2 2020)
+## Reflector count: ~1,500 (Sept 2020)
+
+### Remediation - 400 less reflectors than at Q2 2020
 
 ---
 
