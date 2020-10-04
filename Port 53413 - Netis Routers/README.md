@@ -23,10 +23,10 @@ Not only are Netcore/Netis routers vulnerable to becoming zombies in actual atta
 
 ### Documentation
 
-- https://www.securityweek.com/easily-exploitable-vulnerability-found-netis-routers
-- https://www.securitynewspaper.com/2016/11/22/security-firm-detects-57m-attempts-exploit-2-year-old-router-firmware-backdoor/
+- <https://www.securityweek.com/easily-exploitable-vulnerability-found-netis-routers>
+- <https://www.securitynewspaper.com/2016/11/22/security-firm-detects-57m-attempts-exploit-2-year-old-router-firmware-backdoor/>
 
 ### Mitigations
 
 - Consumer dilligence
-- https://routersecurity.org/testrouter.php
+- <https://routersecurity.org/testrouter.php>
