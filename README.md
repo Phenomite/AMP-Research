@@ -2,27 +2,32 @@
 
 ## Research on exotic UDP/TCP amplification vectors, payloads and mitigations
 
-The subfolder's in this repo will house the following:
- - Overview README.md
-   - Potential official protocol documentation.
-   - Potential Mitigation strategies.
- - Scanning payload (e.g. for use in zmap) OR potential scanning script (C).
- - Raw socket flood script (C) for analysis to build flowspec or ACL mitigations.
+**The subfolders in this repo will house the following:**
 
+* Overview README.md
+  * Name, Ports, Amplification factors, Update Info
+  * Request <> Response Example with test IP (netcat yay!)
+  * Potential official documentation
+  * Potential mitigation strategies
+* The raw payload (e.g. for use in zmap) OR potential scanning script (C).
+* Raw socket flood script (C) for analysis to build flowspec or ACL mitigations.
 
 ## What is amplification in respect to network protocols?
 
 Amplification is where well-formed or malformed socket or application data requests elicit a response larger than the input data. This can then be abused to "amplify" a request, usually by means of Distributed Reflected Denial of Service (DDoS/DRDoS) attacks.
 
-Best way to show what this means is an example.
+Best way to show what this means is by an example.
 
-Example UDP response size from 1 byte on MSSQL protocol:
-- >~# echo -ne '\x02' | nc -u -q 2 190.xx.xx.xx 1434|xxd -p|wc -c
+### Example UDP response size from **1 byte** to a MSSQL (Microsoft SQL Server) listener:
+
+> `echo -ne '\x02' | nc -u -q 2 190.xx.xx.xx 1434|xxd -p|wc -c`
 	<pre>629 bytes</pre>
-	>That's an amplification factor of over 23x.
 
-Example hex response from a discovery probe to Apple Remote Desktop protocol:
- - >~# echo -ne '\x00\x14\x00\x01\x03' |nc -u 89.xx.xx.xx 3283|hexdump
+That's an amplification factor of over **23** times.
+
+### Example hex response from a discovery probe to an ARD (Apple Remote Desktop) listener:
+
+> `echo -ne '\x00\x14\x00\x01\x03' |nc -u 89.xx.xx.xx 3283|hexdump`
     <pre>
 	0000000 0100 ea03 3100 0000 0000 0000 0000 0000
 	0000010 0000 0000 0000 0000 0000 0000 0000 0000
@@ -44,10 +49,25 @@ Example hex response from a discovery probe to Apple Remote Desktop protocol:
 
 ## Compiling the C code in this repo?
 
-Remember that checksum ones-compliment relies on 32bit compilation.
-This really only matters with TCP scripts.
+General C scripts:
 
+```bash
+gcc -pthread -O2 -o binary file.c
+```
 
-## Vulnerable reflectors?
+TCP scripts (requires 32bit compilation to avoid invalid checksum function return values):
 
-No. This is here to help everyone mitigate amplification vectors. 
+```bash
+gcc -m32 -pthread -O2 -o binary file.c
+```
+
+## Vulnerable reflectors
+
+This repo is here to help everyone mitigate amplification vectors that have yet to be abused or are being actively abused with little related or consolidated information.
+
+Reflector lists are scanned and provided on a case by case basis or as necessary for remediation [on pastebin here](https://pastebin.com/u/Phenomite/1/6WuyRz1m).
+
+* Examples of cases include:
+  * Infected hosts that need to be quickly added to a blacklist to get the attention of network owners.
+  * Protocols that are devastating (e.g. MemcacheD) and require publicized lists to blackhole or to bulk contact network owners.
+  * Because shodan already has you.
