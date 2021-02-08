@@ -12,6 +12,11 @@
 * The raw payload (e.g. for use in zmap) OR potential scanning script (C).
 * Raw socket flood script (C) for analysis to build flowspec or ACL mitigations.
 
+## News Referencing This Repo (Kudos!)
+
+* MS-RDPEUDP Scanning has begun by The Shadowserver Foundation (2021-01-25) - <https://www.shadowserver.org/news/scanning-for-accessible-ms-rdpeudp-services/>
+* DVR reflection abused on Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
+
 ## What is amplification in respect to network protocols?
 
 Amplification is where well-formed or malformed socket or application data requests elicit a response larger than the input data. This can then be abused to "amplify" a request, usually by means of Distributed Reflected Denial of Service (DDoS/DRDoS) attacks.
