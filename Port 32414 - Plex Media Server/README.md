@@ -8,6 +8,10 @@
 
 ---
 
+## Patch released! <https://forums.plex.tv/t/plex-media-server/30447/396>
+
+---
+
 ### Malformed requests
 
 - Plex Media Server seems to respond with full HTTP 200 response when even a single character "M" from the Simple Service Discovery well-formed probe "M-SEARCH \* HTTP/1.1" is sent.
