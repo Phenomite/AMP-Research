@@ -27,10 +27,10 @@ The `required` header is router set in most cases and not required, sure you'll 
 Most devices only look for `M-SEARCH`, `ST:ssdp:all` and `MAN:"ssdp:discover"`, thus you can get multi-packet full responses with a payload such as:
 
 ```
-M-SEARCH\r\nST:ssdp:all\r\nMAN:\"ssdp:discover\"\r\n
+M-SEARCH\nST:ssdp:all\nMAN:"ssdp:discover"\n
 ```
 
-Which is only 47 bytes, bringing average amplification slightly above 30x in Q1 2020.
+Which is only 41 bytes, bringing average amplification slightly above 30x in Q1 2020.
 
 ### Sorting multi-packet responses
 
