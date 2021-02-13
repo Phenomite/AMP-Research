@@ -1,6 +1,6 @@
 # MSSQL (Microsoft SQL Server)
 
-## Port: 1434
+## Port: 1434, 1433
 
 ## Proto: UDP
 
