@@ -1,10 +1,12 @@
 # Plex Media Server
 
-## Port: 32414 **and 32412**
+## Port: **32414**, **32412**
 
-## Proto: UDP
+## Proto: **UDP**
 
-## Amplification factor: 10x
+## Amplification factor: **~10x**
+
+## Reflector count: **~24,550 (Feb 2021 Post-patch)**
 
 ---
 
