@@ -15,7 +15,8 @@
 ## News Referencing This Repo (Kudos!)
 
 * MS-RDPEUDP Scanning has begun by The Shadowserver Foundation (2021-01-25) - <https://www.shadowserver.org/news/scanning-for-accessible-ms-rdpeudp-services/>
-* DVR reflection abused on Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
+* DVR reflection abused against Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
+* Powerhouse VPN Servers being abused (2021-02-22) - <https://www.zdnet.com/article/powerhouse-vpn-products-can-be-abused-for-large-scale-ddos-attacks/> 
 
 ## What is amplification in respect to network protocols?
 
