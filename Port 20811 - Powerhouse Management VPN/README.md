@@ -14,6 +14,12 @@
 
 ---
 
+### Patching has been reportedly rolled out internally by Powerhouse
+
+An updated scan result will be listed on the 11th of March 2021. 
+
+---
+
 Powerhouse Management products - either Outfox (a latency reduction VPN service) or VyprVPN (a general vpn service) are exposing an interesting port - port 20811 which provides a massive data and packet amplification factor when probed with any single byte request.
 
 Not only does this mean Powerhouse servers can be used as a DDoS amplification source, but reveals all servers around the world that are running such potential VPN services - which removes the privacy factor somewhat.
