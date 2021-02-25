@@ -8,7 +8,7 @@
 
 ## Packet Amplification factor: **1x**
 
-## Reflector count: **Coming soon...**
+## Reflector count: ~51100 (Port 443), Port 80 coming soon...
 
 ---
 
