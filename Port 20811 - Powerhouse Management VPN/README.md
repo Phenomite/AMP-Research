@@ -14,9 +14,9 @@
 
 ---
 
-### Patching has been reportedly [rolled out internally by Powerhouse](https://www.vyprvpn.com/blog/vyprvpns-response-to-article-on-server-bug)
+### Patching has been [rolled out by Powerhouse](https://www.vyprvpn.com/blog/vyprvpns-response-to-article-on-server-bug)
 
-An updated scan result will be listed on the 11th of March 2021.
+Updated scan result 2021-02-25 yields **no reflectors left active**! Well done.
 
 ---
 
