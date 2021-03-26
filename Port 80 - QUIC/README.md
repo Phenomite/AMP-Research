@@ -8,7 +8,7 @@
 
 ## Packet Amplification factor: **1x**
 
-## Reflector count: ~51100 (Port 443), Port 80 coming soon...
+## Reflector count: ~51100 (Port 443), ~21500 (Port 80)
 
 ---
 
@@ -42,6 +42,7 @@ If the first byte is not a reset or malformed public flag, say `0x01`:
   - ASCII character space: `\0e\00\00\00\00\00\00\00\00PRST\02\00\00\00RNON\08\00\00\00CADR\10\00\00\00\b5i\0f\00\00\00\00\00\02\00n!\0f|\8d\d4`
 
   - Raw bytes (example only because of randomness from nonce and client ID): `0e00000000000000005052535402000000524e4f4e080000004341445210000000b5690f000000000002003ed2d983aa01`
+  - Other example: `0000000300000000696e76616c69642072657175657374` (~15.500 of total reflectors on port 80)
 
 ### Documentation
 
