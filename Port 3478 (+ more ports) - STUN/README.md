@@ -6,7 +6,7 @@
 
 ## Amplification factor: ~3x
 
-## Reflector count: ~45,000 (1/1/2020)
+## Reflector count: ~185.000 (20/3/2021)
 
 ---
 
