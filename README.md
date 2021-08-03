@@ -14,6 +14,7 @@
 
 ## News Referencing This Repo (Kudos!)
 
+* Honeypot research shows variety of DDoS amplification methods (SRLabs 2021-07-30) - <https://www.srlabs.de/bites/honeypot-research-shows-variety-of-ddos-amplification-methods>
 * DHCPDiscover Reflection/Amplification DDoS Attack Mitigation Recommendations | NETSCOUT (2021-07-07) - <https://www.netscout.com/blog/asert/dhcpdiscover-reflectionamplification-ddos-attack-mitigation>
 * Powerhouse VPN Servers being abused (2021-02-22) - <https://www.zdnet.com/article/powerhouse-vpn-products-can-be-abused-for-large-scale-ddos-attacks/> 
 * DVR reflection abused against Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
