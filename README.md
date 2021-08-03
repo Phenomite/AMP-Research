@@ -2,7 +2,7 @@
 
 ## Research on exotic UDP/TCP amplification vectors, payloads and mitigations
 
-**The subfolders in this repo will house the following:**
+**The subfolders in this repository will contain the following:**
 
 * Overview README.md
   * Name, Ports, Amplification factors, Update Info
@@ -12,7 +12,7 @@
 * The raw payload (e.g. for use in zmap) OR potential scanning script (C).
 * Raw socket flood script (C) for analysis to build flowspec or ACL mitigations.
 
-## News Referencing This Repo (Kudos!)
+## Who referenced this repository (Kudos!)
 
 * Honeypot research shows variety of DDoS amplification methods (SRLabs 2021-07-30) - <https://www.srlabs.de/bites/honeypot-research-shows-variety-of-ddos-amplification-methods>
 * DHCPDiscover Reflection/Amplification DDoS Attack Mitigation Recommendations | NETSCOUT (2021-07-07) - <https://www.netscout.com/blog/asert/dhcpdiscover-reflectionamplification-ddos-attack-mitigation>
@@ -20,20 +20,20 @@
 * DVR reflection abused against Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
 * MS-RDPEUDP Scanning has begun by The Shadowserver Foundation (2021-01-25) - <https://www.shadowserver.org/news/scanning-for-accessible-ms-rdpeudp-services/>
 
-## What is amplification in respect to network protocols?
+## What is "amplification" in respect to Denial of Service? Give me an Example!
 
-Amplification is where well-formed or malformed socket or application data requests elicit a response larger than the input data. This can then be abused to "amplify" a request, usually by means of Distributed Reflected Denial of Service (DDoS/DRDoS) attacks.
+Amplification is where well-formed or malformed socket or application data requests elicit a response larger than the input data. This can then be abused to "amplify" a request, usually by means of Distributed Reflected Denial of Service (DRDoS) attacks. This distinction is usually lumped under the one banner of "DDoS"; however the former indicates that the traffic does not directly come from bots or single servers but is reflected off of usually benign services, thus typically rendering blacklists and simple firewall solutions useless.
 
-Best way to show what this means is by an example.
+Best way to show what this means is using the network protocol MSSQL over TCP/IP UDP port 1434 as an example.
 
-### Example UDP response size from **1 byte** to a MSSQL (Microsoft SQL Server) listener:
+### Example UDP response size from **1 byte** to a MSSQL (Microsoft SQL Server) listener
 
 > `echo -ne '\x02' | nc -u -q 2 190.xx.xx.xx 1434|xxd -p|wc -c`
 	<pre>629 bytes</pre>
 
 That's an amplification factor of over **23** times.
 
-### Example hex response from a discovery probe to an ARD (Apple Remote Desktop) listener:
+### Example hex response from a discovery probe to an ARD (Apple Remote Desktop) listener
 
 > `echo -ne '\x00\x14\x00\x01\x03' |nc -u 89.xx.xx.xx 3283|hexdump`
     <pre>
