@@ -1,1 +1,2 @@
-http://webcache.googleusercontent.com/search?q=cache:RUsb20cG5GQJ:https://forums.ruckuswireless.com/conversations/smartcell-insight-sci/smartzone100-product-has-security-vulnerabilitieshackers-can-use-udp9001-port-to-launch-ddos-reflection-amplification-attack/60e2e826343e2b0bb01b8590?commentId%3D60e2f5dbcddb2601c40aae69&client=safari&hl=en&gl=es&strip=1&vwsrc=0
+https://community.ruckuswireless.com/t5/RUCKUS-Cloud/SmartZone-100-product-has-security-vulnerabilities-Hackers-can/m-p/31245
+
