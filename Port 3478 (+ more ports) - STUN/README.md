@@ -13,7 +13,7 @@
 - Restund, CoTURN, reTurnServer all implement RFC5389 with advanced features for servers.
 - However they suffer from being able to amplify blank 20-byte STUN messages with their version information and other STUN initialization bytes.
 - 20-byte STUN packet construction:
-```|0 0|     STUN Message Type     |         Message Length        |                         Magic Cookie                          |                     Transaction ID (96 bits)                  |```
+```|00| STUN Message Type | Message Length | Magic Cookie | Transaction ID (12 bytes) |```
   - Message type is encoded into the first 16 bits (2 bytes) and the magic cookie is: `\x21\x12\xa4\x42`
   - The Message itself is not included (we are just sending the 20-byte header) thus the length remains `\x00`. The transaction id (last 12 bytes) is left blank.
   - Read `Structure` documentation below to see how this 20-bytes is constructed in a legitimate use-case.

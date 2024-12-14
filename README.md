@@ -19,6 +19,7 @@
 * Powerhouse VPN Servers being abused (2021-02-22) - <https://www.zdnet.com/article/powerhouse-vpn-products-can-be-abused-for-large-scale-ddos-attacks/> 
 * DVR reflection abused against Azure R6 and Ark Evolved servers (2021-02-04) - <https://azure.microsoft.com/en-au/blog/azure-ddos-protection-2020-year-in-review/>
 * MS-RDPEUDP Scanning has begun by The Shadowserver Foundation (2021-01-25) - <https://www.shadowserver.org/news/scanning-for-accessible-ms-rdpeudp-services/>
+* Shadowserver Foundation Accessible STUN Service Reporting (2024-01-01) - <https://www.shadowserver.org/what-we-do/network-reporting/accessible-stun-service-report/>
 
 ## What is "amplification" in respect to Denial of Service? Give me an Example!
 
